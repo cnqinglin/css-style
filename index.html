@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The harder you work. the luckier you will be</title>
+	<style>
+		*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: black;
+    perspective:1200px;
+}
+.box{
+    position:relative;
+    width:200px;
+    height:200px;
+    margin:400px auto;
+    transform-style:preserve-3d;/*让子元素 在3D空间占据位置*/
+    transition:12s;
+    background-image: url('image/timg.jpg');
+}
+.box:hover{
+    transform:rotateX(360deg) rotateY(360deg);
+    /* transform:rotateY(360deg); */
+} 
+.box:hover .top{
+    /* box-shadow:-500px 50px 15px 200px #FF00ED; */
+    background-color: #FF00ED;
+}
+.box:hover .bottom{
+    /* box-shadow:-500px 50px 15px 200px #689CEF; */
+    background-color: #689CEF;
+}
+.box:hover .left{
+    box-shadow:-500px 50px 15px 200px #FEFEFE;
+    background-color: #FEFEFE;
+}
+.box:hover .right{
+    box-shadow:-500px 50px 15px 200px #66C6B4;
+    background-color: #66C6B4;
+}
+.box:hover .front{
+    box-shadow:-500px 50px 15px 200px #EEDE5A;
+    background-color: #EEDE5A;
+}
+.box:hover .behind{
+    box-shadow:-500px 50px 15px 200px #5BBA63;
+    background-color: #5BBA63;
+    background-color: #5BBA63;
+}
+.box .face{
+    position:absolute;
+    left:0;
+    top:0;
+    width:200px;
+    height:200px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 200px;
+    background-image: repeating-linear-gradient(red 0%,red 1px,transparent 1px,transparent 23px),
+    repeating-linear-gradient(90deg,red 0px,red 1px,transparent 1px,transparent 23px);
+    transition:5s;
+}
+.box .top{
+    color:#356781;
+    text-shadow: 5px 5px 5px #356781;
+    transform: rotateX(90deg) translateZ(100px);
+}
+.box .bottom{
+    color:#998866;
+    text-shadow: 5px 5px 5px #998866;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.box .left{
+    color:purple;
+    text-shadow: 5px 5px 5px purple;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.box .right{
+    color:pink;
+    text-shadow: 5px 5px 5px pink;
+    transform: rotateY(90deg) translateZ(100px);
+}
+.box .front{
+    color: blue;
+    text-shadow: 5px 5px 5px blue;
+    transform: translateZ(100px);
+}
+.box .behind{
+    color:skyblue;
+    text-shadow: 5px 5px 5px skyblue;
+    transform: rotateX(-180deg) translateZ(100px) rotateZ(180deg);
+}
+.box .h1{
+    background-image: none;
+    font-size: 40px;
+    color: orange;
+    text-shadow: 5px 5px 5px orange;
+    }		
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="face top">越</div>
+		<div class="face bottom">努</div>
+		<div class="face left">力</div>
+		<div class="face right">越</div>
+		<div class="face front">幸</div>
+		<div class="face behind">运</div>
+		<h1 class="face h1">加油<h1/>
+	</div>
+</body>
+</html>
